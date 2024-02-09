@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace ConsoleApp1
 {
@@ -13,23 +13,30 @@ namespace ConsoleApp1
         private int[] a;
 
         private bool flag = false;
-
+        private void input_user()
+        {
+            for (int i = 0; i < a.Length; ++i)
+            {
+                a[i] = int.Parse(Console.ReadLine());
+            }
+        }
+        private void input_random() 
+        {
+            for (int i = 0; i < a.Length; ++i)
+            {
+                a[i] = rnd.Next(1, 100);
+            }
+        }
         public void input(int n, bool flag = false)
         {
             this.a = new int[n];
             if (flag)
             {
-                for (int i = 0; i < a.Length; ++i)
-                {
-                    a[i] = int.Parse(Console.ReadLine());
-                }
+                input_user();
             }
             else
             {
-                for (int i = 0; i < a.Length; ++i)
-                {
-                    a[i] = rnd.Next(1, 100);
-                }
+                input_random();
             }
         }
         public void print()
