@@ -56,6 +56,22 @@ namespace ConsoleApp1
             }
             Console.WriteLine(sum / a.Length);
         }
+        public int[] delete100(){
+            int cnt = 0;
+            for (int i = 0; i < a.Length; ++i){
+                if (Math.Abs(a[i]) > 100){
+                    cnt++;
+                }
+            }
+            int [] b = new int[cnt];
+            int i = 0;
+            int j = 0;
+            while (i < a.Length){
+                if (Math.Abs(a[i]) < 100){
+                    b[j] = a[i]
+                }
+            }
+        }
     }
     class Program
     {
