@@ -56,6 +56,20 @@ namespace ConsoleApp1
             }
             Console.WriteLine(sum / a.Length);
         }
+        public void check_100(){
+            for (int i = 0; i < a.Length; ++i){
+                if (Math.Abs(a[i]) < 100){
+                    Console.Write($"{a[i]} ");
+                }
+            }
+            Console.WriteLine();
+        }
+        public void pop_repeated(){
+            int[] b = new int[a.Length];
+            for (int i = 0; i < a.Length){
+                
+            }
+        }
     }
     class Program
     {
@@ -68,6 +82,7 @@ namespace ConsoleApp1
             vector1.input(n, true);
             vector1.print();
             vector1.average();
+            vector1.check_100();
         }
     }
 }
